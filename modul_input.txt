@@ -3,6 +3,8 @@
 
 $include_path = '../files/addons/markdownplus/markitup/';
 
+echo '<link rel="stylesheet" type="text/css" href="'.$include_path.'/skins/markitup/style.css" />';
+echo '<link rel="stylesheet" type="text/css" href="'.$include_path.'/sets/markdown/style.css" />';
 echo '<script type="text/javascript" src="'.$include_path.'jquery.markitup.js"></script>';
 echo '<script type="text/javascript" src="'.$include_path.'sets/markdown/set.js"></script>';
 ?>
