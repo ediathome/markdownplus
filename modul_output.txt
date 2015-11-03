@@ -1,0 +1,16 @@
+<?php
+/**
+ * MarkdownPlus-Modul Ausgabe
+ *
+ * @author Martin Kolb
+ */
+
+# Hole den Wert aus der Datenbank
+$sourceCode='REX_VALUE[1]';
+
+# Entferne html breaks, da sie die Konvertierung stören
+$sourceCode=preg_replace('/<br>|<br\/>|<br \/>/', '', $sourceCode);
+
+# Ausgabe
+echo rex_markdown::getHtml($sourceCode);
+?>
