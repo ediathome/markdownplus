@@ -1,8 +1,8 @@
 <?php 
 // Beispiel mit Markitup-Editor
 ?>
-<script type="text/javascript" src="files/markitup/jquery.markitup.js"></script>
-<script type="text/javascript" src="files/markitup/sets/markdown/set.js"></script>
+<script type="text/javascript" src="files/markdownplus/markitup/jquery.markitup.js"></script>
+<script type="text/javascript" src="files/markdownplus/markitup/sets/markdown/set.js"></script>
 
 <script language="javascript">
 $(document).ready(function()	{
