@@ -1,0 +1,11 @@
+markdown_addon_help = Markdown über die Klasse `Parsedown` für das REDAXO Frontend.
+
+markdown_start = Start
+markdown_help = Hilfe
+
+markdown_start_title = Markdown für REDAXO
+
+markdown_help_chapter_readme = Readme
+markdown_help_chapter_changelog = Changelog
+markdown_help_chapter_license = Lizenz
+
