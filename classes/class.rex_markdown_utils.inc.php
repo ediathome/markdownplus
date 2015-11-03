@@ -26,4 +26,3 @@ class rex_markdown_utils {
 		return str_replace('Markdown AddOn - ', '', $md);
 	}
 }
-

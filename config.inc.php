@@ -10,7 +10,9 @@ $REX['ADDON']['perm']['markdownplus'] = 'markdownplus[]';
 // permissions
 $REX['PERM'][] = 'markdownplus[]';
 
-require($REX['INCLUDE_PATH'] . '/addons/markdownplus/classes/class.rex_markdownplus.inc.php');
+if (!class_exists('rex_markdown')) {
+	require($REX['INCLUDE_PATH'] . '/addons/markdownplus/classes/class.rex_markdown.inc.php');
+}
 
 if ($REX['REDAXO']) {
 	// include patched parsedown class with rex_highlight() functionality for backend
@@ -19,7 +21,9 @@ if ($REX['REDAXO']) {
 	}
 
 	// includes
-	require($REX['INCLUDE_PATH'] . '/addons/markdown/classes/class.rex_markdown_utils.inc.php');
+	if (!class_exists('rex_markdown_utils')) {
+		require($REX['INCLUDE_PATH'] . '/addons/markdown/classes/class.rex_markdown_utils.inc.php');
+	}
 
 	// add lang file
 	$I18N->appendFile($REX['INCLUDE_PATH'] . '/addons/markdownplus/lang/');
