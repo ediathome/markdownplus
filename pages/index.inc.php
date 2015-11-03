@@ -12,10 +12,10 @@ if ($subpage == '') {
 require($REX['INCLUDE_PATH'] . '/layout/top.php');
 
 // title
-rex_title($REX['ADDON']['name']['markdown'] . ' <span style="font-size:14px; color:silver;">' . $REX['ADDON']['version']['markdown'] . '</span>', $REX['ADDON']['markdown']['SUBPAGES']);
+rex_title($REX['ADDON']['name']['markdownplus'] . ' <span style="font-size:14px; color:silver;">' . $REX['ADDON']['version']['markdownplu'] . '</span>', $REX['ADDON']['markdownplus']['SUBPAGES']);
 
 // include subpage
-include($REX['INCLUDE_PATH'] . '/addons/markdown/pages/' . $subpage . '.inc.php');
+include($REX['INCLUDE_PATH'] . '/addons/markdownplus/pages/' . $subpage . '.inc.php');
 ?>
 
 <style type="text/css">

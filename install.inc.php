@@ -2,9 +2,9 @@
 $error = '';
 
 if ($error == '') {
-	$REX['ADDON']['install']['markdown'] = true;
+	$REX['ADDON']['install']['markdownplus'] = true;
 } else {
-	$REX['ADDON']['installmsg']['markdown'] = $error;
+	$REX['ADDON']['installmsg']['markdownplus'] = $error;
 }
 
 
