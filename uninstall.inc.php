@@ -1,3 +1,3 @@
 <?php
-$REX['ADDON']['install']['markdown'] = false;
+$REX['ADDON']['install']['markdownplus'] = false;
 

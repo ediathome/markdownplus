@@ -1,0 +1,16 @@
+<?php 
+// Beispiel mit Markitup-Editor
+?>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="markitup/jquery.markitup.js"></script>
+<script type="text/javascript" src="markitup/sets/markdown/set.js"></script>
+
+<script language="javascript">
+$(document).ready(function()	{
+    $('#markdownplus').markItUp(myMarkdownSettings);
+});
+</script>
+
+<strong>Fliesstext:</strong><br />
+
+<textarea name="VALUE[1]" class="markdownplus" cols="80" rows="20">REX_VALUE[1]</textarea>
