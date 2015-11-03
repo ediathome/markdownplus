@@ -11,7 +11,7 @@ echo '<script type="text/javascript" src="'.$include_path.'sets/markdown/set.js"
 
 <script language="javascript">
 jQuery(document).ready(function()	{
-    jQuery('#markdownplus').markItUp(myMarkdownSettings);
+    jQuery('.markdownplus').markItUp(myMarkdownSettings);
 });
 </script>
 
