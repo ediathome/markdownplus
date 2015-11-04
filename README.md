@@ -33,3 +33,4 @@ Credits
 * [Markdown](https://github.com/RexDude/markdown) by Rexdude Copyright (c) 2014 RexDude
 * [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
 * [markItUp! Editor](http://markitup.jaysalvat.com/home/) by Jay Salvat
+* [Redaxo](http://www.redaxo.org) Redaxo CMS
