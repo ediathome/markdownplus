@@ -2,6 +2,6 @@
 // Beispiel mit Markitup-Editor
 ?>
 
-<strong>Fliesstext:</strong><br />
+<strong>Markdown:</strong><br />
 
 <textarea name="VALUE[1]" class="markdownplus" cols="80" rows="20">REX_VALUE[1]</textarea>
