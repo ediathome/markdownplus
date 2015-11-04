@@ -1,19 +1,6 @@
 <?php 
 // Beispiel mit Markitup-Editor
-
-$include_path = $REX['HTDOCS_PATH'].'/files/addons/markdownplus/markitup/';
-
-echo '<link rel="stylesheet" type="text/css" href="'.$include_path.'/skins/markitup/style.css" />';
-echo '<link rel="stylesheet" type="text/css" href="'.$include_path.'/sets/markdown/style.css" />';
-echo '<script type="text/javascript" src="'.$include_path.'jquery.markitup.js"></script>';
-echo '<script type="text/javascript" src="'.$include_path.'sets/markdown/set.js"></script>';
 ?>
-
-<script language="javascript">
-jQuery(document).ready(function()	{
-    jQuery('.markdownplus').markItUp(myMarkdownSettings);
-});
-</script>
 
 <strong>Fliesstext:</strong><br />
 

@@ -1,7 +1,7 @@
 MarkdownPlus AddOn für REDAXO 4
 ===========================
 
-Dieses Addon führt das [Markdown-Addon von Rexdude](https://github.com/RexDude/markdown) zusammen mit dem [markItUp! Editor](http://markitup.jaysalvat.com/home/) von Jay Salvat, um in Redaxo komfortabel Markdown zu editieren.
+Dieses Addon führt das [Markdown-Addon von Rexdude](https://github.com/RexDude/markdown) zusammen mit dem [markItUp! Editor](http://markitup.jaysalvat.com/home/) von Jay Salvat, um in Redaxo komfortabel Markdown zu editieren. Dabei kann Markdown bequem über die Toolbar eingefügt werden.
 
 Installation
 ------------
