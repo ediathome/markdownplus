@@ -1,46 +1,19 @@
-Markdown AddOn für REDAXO 4
+MarkdownPlus AddOn für REDAXO 4
 ===========================
 
-Ermöglicht Markdown über die Klasse [Parsedown](http://parsedown.org) für REDAXO.
+Dieses Addon führt das [Markdown-Addon von Rexdude](https://github.com/RexDude/markdown) zusammen mit dem [markItUp! Editor](http://markitup.jaysalvat.com/home/) von Jay Salvat, um in Redaxo komfortabel Markdown zu editieren.
 
 Features
 --------
 
-* Bindet die Parsedown-Klasse im Frontend und Backend ein
-* Markdown Extra Unterstützung
-* Line Break Unterstützung
-* String Table AddOn Unterstützung
-* Ausgabe ohne `<p>` Tags möglich
-
-Codebeispiele
--------------
-
-```php
-<?php
-// markdown nach html
-echo rex_markdown::getHtml('**bold text**');
-
-// markdown nach html ohne <p> Tags 
-echo rex_markdown::getHtmlLine('**bold text**');
-
-// markdown aus string table addon nach html
-echo rex_markdown::getString('key');
-
-// markdown aus string table addon nach html ohne <p> Tags 
-echo rex_markdown::getStringLine('key');
-?>
-```
+* Vereinfachtes Editieren von Markdown durch die Markitup-Befehlsleiste
+* Parsen des Markdown-Codes mit ParseDown
 
 Hinweise
 --------
 
-* Getestet mit REDAXO 4.5, 4.6
-* AddOn-Ordner lautet: `markdown`
-
-Changelog
----------
-
-siehe [CHANGELOG.md](CHANGELOG.md)
+* Getestet mit REDAXO 4.6.1
+* AddOn-Ordner lautet: `markdownplus`
 
 Lizenz
 ------
@@ -50,4 +23,6 @@ siehe [LICENSE.md](LICENSE.md)
 Credits
 -------
 
+* [Markdown](https://github.com/RexDude/markdown) by Rexdude Copyright (c) 2014 RexDude
 * [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
+* [markItUp! Editor](http://markitup.jaysalvat.com/home/) by Jay Salvat
