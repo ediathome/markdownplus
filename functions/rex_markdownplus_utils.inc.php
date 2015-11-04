@@ -4,7 +4,7 @@ function rex_markdownplus_utils_add_header_files($params)
     global $REX;
     $addon = 'markdownplus';
 
-	$include_path = $REX['HTDOCS_PATH'].'/files/addons/markdownplus/markitup/';
+	$include_path = $REX['HTDOCS_PATH'].'files/addons/markdownplus/markitup/';
 
     $params['subject'] .= "\n  ". '<link rel="stylesheet" type="text/css" href="'.$include_path.'skins/markitup/style.css" />';
     $params['subject'] .= "\n  ". '<link rel="stylesheet" type="text/css" href="'.$include_path.'sets/markdown/style.css" />';
