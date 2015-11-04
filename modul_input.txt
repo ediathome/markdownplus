@@ -1,7 +1,7 @@
 <?php 
 // Beispiel mit Markitup-Editor
 
-$include_path = '../files/addons/markdownplus/markitup/';
+$include_path = $REX['HTDOCS_PATH'].'/files/addons/markdownplus/markitup/';
 
 echo '<link rel="stylesheet" type="text/css" href="'.$include_path.'/skins/markitup/style.css" />';
 echo '<link rel="stylesheet" type="text/css" href="'.$include_path.'/sets/markdown/style.css" />';

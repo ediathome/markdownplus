@@ -1,10 +1,12 @@
 <?php
+error_log("Config.Inc.Php:: init");
+
 // init addon
-$REX['ADDON']['name']['markdown'] = 'MarkdownPlus';
-$REX['ADDON']['page']['markdown'] = 'markdownplus';
-$REX['ADDON']['version']['markdown'] = '0.1';
-$REX['ADDON']['author']['markdown'] = 'ediathome';
-$REX['ADDON']['supportpage']['markdown'] = 'forum.redaxo.org';
+$REX['ADDON']['name']['markdownplus'] = 'MarkdownPlus';
+$REX['ADDON']['page']['markdownplus'] = 'markdownplus';
+$REX['ADDON']['version']['markdownplus'] = '0.1';
+$REX['ADDON']['author']['markdownplus'] = 'ediathome';
+$REX['ADDON']['supportpage']['markdownplus'] = 'forum.redaxo.org';
 $REX['ADDON']['perm']['markdownplus'] = 'markdownplus[]';
 
 // permissions
@@ -14,19 +16,30 @@ if (!class_exists('rex_markdown')) {
 	require($REX['INCLUDE_PATH'] . '/addons/markdownplus/classes/class.rex_markdown.inc.php');
 }
 
+// for backend only
+error_log("Config.Inc.Php:: before backend");
 if ($REX['REDAXO']) {
+	error_log("Config.Inc.Php:: inside backend");
+	$addon_dir = $REX['INCLUDE_PATH'] . '/addons/markdownplus';
+	
 	// include patched parsedown class with rex_highlight() functionality for backend
 	if (!class_exists('Parsedown')) {
-		require($REX['INCLUDE_PATH'] . '/addons/markdown/lib/Parsedown.redaxo.php');
+		require($addon_dir . '/lib/Parsedown.redaxo.php');
 	}
 
 	// includes
 	if (!class_exists('rex_markdown_utils')) {
-		require($REX['INCLUDE_PATH'] . '/addons/markdown/classes/class.rex_markdown_utils.inc.php');
+		require($addon_dir . '/classes/class.rex_markdown_utils.inc.php');
 	}
 
+	require_once($addon_dir . '/functions/rex_markdownplus_utils.inc.php');
+	// add javascript and css via PAGE_HEADER extension
+	error_log("Config.Inc.Php:: before register_extension");
+	rex_register_extension('PAGE_HEADER', 'rex_markdownplus_utils_add_header_files');
+	error_log("Config.Inc.Php:: after register_extension");
+
 	// add lang file
-	$I18N->appendFile($REX['INCLUDE_PATH'] . '/addons/markdownplus/lang/');
+	$I18N->appendFile($addon_dir . '/lang/');
 
 	// add subpages
 	$REX['ADDON']['markdown']['SUBPAGES'] = array(
@@ -36,12 +49,12 @@ if ($REX['REDAXO']) {
 } else {
 	// include parsedown class for frontend
 	if (!class_exists('Parsedown')) {
-		require($REX['INCLUDE_PATH'] . '/addons/markdownplus/lib/Parsedown.php');
+		require($addon_dir . '/lib/Parsedown.php');
 	}
 }
 
 // for frontend and backend
 if (!class_exists('ParsedownExtra')) {
-	require($REX['INCLUDE_PATH'] . '/addons/markdownplus/lib/ParsedownExtra.php');
+	require($addon_dir . '/lib/ParsedownExtra.php');
 }
 ?>
