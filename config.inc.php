@@ -1,6 +1,4 @@
 <?php
-error_log("Config.Inc.Php:: init");
-
 // init addon
 $REX['ADDON']['name']['markdownplus'] = 'MarkdownPlus';
 $REX['ADDON']['page']['markdownplus'] = 'markdownplus';
@@ -17,9 +15,7 @@ if (!class_exists('rex_markdown')) {
 }
 
 // for backend only
-error_log("Config.Inc.Php:: before backend");
 if ($REX['REDAXO']) {
-	error_log("Config.Inc.Php:: inside backend");
 	$addon_dir = $REX['INCLUDE_PATH'] . '/addons/markdownplus';
 	
 	// include patched parsedown class with rex_highlight() functionality for backend
@@ -34,9 +30,7 @@ if ($REX['REDAXO']) {
 
 	require_once($addon_dir . '/functions/rex_markdownplus_utils.inc.php');
 	// add javascript and css via PAGE_HEADER extension
-	error_log("Config.Inc.Php:: before register_extension");
 	rex_register_extension('PAGE_HEADER', 'rex_markdownplus_utils_add_header_files');
-	error_log("Config.Inc.Php:: after register_extension");
 
 	// add lang file
 	$I18N->appendFile($addon_dir . '/lang/');
