@@ -37,8 +37,8 @@ if ($REX['REDAXO']) {
 
 	// add subpages
 	$REX['ADDON']['markdown']['SUBPAGES'] = array(
-		array('', $I18N->msg('markdownplus_start')),
-		array('help', $I18N->msg('markdownplus_help'))
+		array('', $I18N->msg('markdown_start')),
+		array('help', $I18N->msg('markdown_help'))
 	);
 } else {
 	// include parsedown class for frontend
