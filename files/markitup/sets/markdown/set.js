@@ -13,6 +13,10 @@
 var myMarkdownSettings = {
 	previewParserPath:	'',
 	onShiftEnter: {keepDefault:false, openWith:'\n\n'},
+	onTab: { 
+		keepDefault: false, 
+		replaceWith: '\t'
+	},
 	markupSet: [
 		{name:'First Level Heading', key:'1', openWith: '# ', placeHolder:'Your title here...' },
 		{name:'Second Level Heading', key:'2', openWith: '## ', placeHolder:'Your title here...' },
