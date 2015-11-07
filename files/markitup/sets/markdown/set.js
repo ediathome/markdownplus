@@ -36,7 +36,7 @@ var myMarkdownSettings = {
 		{name:'Code Block / Code', openWith:'(!(\t|!|`)!)', closeWith:'(!(`)!)'},
 		{name:'Table', openWith:'|thead1 | thead2 | thead3 | thead4 |\n|-----|------|------|------|\n|cell1 |cell2 |cell3 |cell4 |\n|cell1 |cell2 |cell3 |cell4 |' },
 		{separator:'---------------'},
-		{name:'Preview', call:'preview', className:"preview"}
+		// {name:'Preview', call:'preview', className:"preview"}
 	]
 }
 
