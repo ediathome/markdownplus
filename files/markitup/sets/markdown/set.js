@@ -10,9 +10,9 @@
 // -------------------------------------------------------------------
 // Feel free to add more tags
 // -------------------------------------------------------------------
-myMarkdownSettings = {
+var myMarkdownSettings = {
 	previewParserPath:	'',
-	onShiftEnter:		{keepDefault:false, openWith:'\n\n'},
+	onShiftEnter: {keepDefault:false, openWith:'\n\n'},
 	markupSet: [
 		{name:'First Level Heading', key:'1', openWith: '# ', placeHolder:'Your title here...' },
 		{name:'Second Level Heading', key:'2', openWith: '## ', placeHolder:'Your title here...' },
@@ -31,9 +31,10 @@ myMarkdownSettings = {
 		{separator:'---------------' },
 		{name:'Picture', key:'P', replaceWith:'![[![Alternative text]!]]([![Url:!:http://]!] "[![Title]!]")'},
 		{name:'Link', key:'L', openWith:'[', closeWith:']([![Url:!:http://]!] "[![Title]!]")', placeHolder:'Your text to link here...' },
-		{separator:'---------------'},	
-		{name:'Quotes', openWith:'> '},
+		{separator:'---------------'},
+		// {name:'Quotes', openWith:'> '}, # disable quotes for now, as they do not work
 		{name:'Code Block / Code', openWith:'(!(\t|!|`)!)', closeWith:'(!(`)!)'},
+		{name:'Table', openWith:'|thead1 | thead2 | thead3 | thead4 |\n|-----|------|------|------|\n|cell1 |cell2 |cell3 |cell4 |\n|cell1 |cell2 |cell3 |cell4 |' },
 		{separator:'---------------'},
 		{name:'Preview', call:'preview', className:"preview"}
 	]
