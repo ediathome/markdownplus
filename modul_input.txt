@@ -1,7 +1,19 @@
 <?php 
 // Beispiel mit Markitup-Editor
+
+$config = array(
+	'input_name' => "VALUE[1]", # name attribute of textarea tag
+	'content' => "REX_VALUE[1]", # content of textarea tag
+	'css_class' => '', # any additional css class you would like to add
+	'cols' => '80', # the number of columns
+	'rows' => '20' # the number of rows
+);
+$editor = new MarkdownPlusEditor($config);
+
 ?>
 
 <strong>Markdown:</strong><br />
 
-<textarea name="VALUE[1]" class="markdownplus" cols="80" rows="20">REX_VALUE[1]</textarea>
+<?
+$editor->output();
+?>

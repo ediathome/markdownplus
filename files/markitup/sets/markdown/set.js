@@ -1,6 +1,9 @@
 /*global
 jQuery, $, alert
 */
+// Copyright (C) 2015 Martin Kolb
+//
+// Based on:
 // -------------------------------------------------------------------
 // markItUp!
 // -------------------------------------------------------------------
@@ -13,6 +16,7 @@ jQuery, $, alert
 // -------------------------------------------------------------------
 // Feel free to add more tags
 // -------------------------------------------------------------------
+
 var myMarkdownSettings = {
 	previewParserPath:	'',
 	onShiftEnter: {keepDefault: false, openWith: '\n\n'},
@@ -39,7 +43,8 @@ var myMarkdownSettings = {
 		{name: 'RedaxoLink',
 			beforeInsert: function () {
 				"use strict";
-				alert("Insert redaxo link");
+				openLinkMap('TINY', '&clang=0');
+				return false;
 			}, className: 'redaxoLinkButton' },
 		{separator: '---------------'},
 		// {name: 'Quotes', openWith: '> '}, # disable quotes for now, as they do not work
@@ -49,6 +54,15 @@ var myMarkdownSettings = {
 		// {name: 'Preview', call: 'preview', className:"preview"}
 	]
 };
+
+var insertLink = function (url, desc) {
+    jQuery.markItUp({
+        openWith: '[',
+        closeWith: desc + '](' + url + ')',
+        className: 'popup-linkintern'
+    });
+};
+
 
 // mIu nameSpace to avoid conflict.
 var miu = {

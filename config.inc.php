@@ -28,6 +28,7 @@ if ($REX['REDAXO']) {
 		require($addon_dir . '/classes/class.rex_markdown_utils.inc.php');
 	}
 
+	require_once($addon_dir . '/classes/class.rex_markdownplus_editor.inc.php');
 	require_once($addon_dir . '/functions/rex_markdownplus_utils.inc.php');
 	// add javascript and css via PAGE_HEADER extension
 	rex_register_extension('PAGE_HEADER', 'rex_markdownplus_utils_add_header_files');

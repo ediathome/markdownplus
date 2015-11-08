@@ -38,10 +38,12 @@
 .pictureButton a {
 	background-image:url(images/picture.png); 
 }
-.linkButton a, .redaxoLinkButton a {
+.linkButton a {
 	background-image:url(images/link.png);
 }
-
+.redaxoLinkButton a {
+	background-image:url(images/redaxo_link.png);
+}
 .quoteButton a	{
 	background-image:url(images/quotes.png);
 }
