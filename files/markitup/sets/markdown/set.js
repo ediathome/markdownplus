@@ -18,33 +18,33 @@ var myMarkdownSettings = {
 	onShiftEnter: {keepDefault: false, openWith: '\n\n'},
 	onTab: {keepDefault: false, replaceWith: '\t'},
 	markupSet: [
-		{name: 'First Level Heading', key: '1', openWith: '# ', placeHolder: 'Your title here...' },
-		{name: 'Second Level Heading', key: '2', openWith: '## ', placeHolder: 'Your title here...' },
-		{name: 'Heading 3', key: '3', openWith: '### ', placeHolder: 'Your title here...' },
-		{name: 'Heading 4', key: '4', openWith: '#### ', placeHolder: 'Your title here...' },
-		{name: 'Heading 5', key: '5', openWith: '##### ', placeHolder: 'Your title here...' },
-		{name: 'Heading 6', key: '6', openWith: '###### ', placeHolder: 'Your title here...' },
+		{name: 'First Level Heading', key: '1', openWith: '# ', placeHolder: 'Your title here...', className: 'h1Button' },
+		{name: 'Second Level Heading', key: '2', openWith: '## ', placeHolder: 'Your title here...' , className: 'h2Button' },
+		{name: 'Heading 3', key: '3', openWith: '### ', placeHolder: 'Your title here...' , className: 'h3Button' },
+		{name: 'Heading 4', key: '4', openWith: '#### ', placeHolder: 'Your title here...' , className: 'h4Button' },
+		{name: 'Heading 5', key: '5', openWith: '##### ', placeHolder: 'Your title here...' , className: 'h5Button' },
+		{name: 'Heading 6', key: '6', openWith: '###### ', placeHolder: 'Your title here...' , className: 'h6Button' },
 		{separator: '---------------' },
-		{name: 'Bold', key: 'B', openWith: '**', closeWith: '**'},
-		{name: 'Italic', key: 'I', openWith: '_', closeWith: '_'},
+		{name: 'Bold', key: 'B', openWith: '**', closeWith: '**', className: 'boldButton' },
+		{name: 'Italic', key: 'I', openWith: '_', closeWith: '_', className: 'italicButton' },
 		{separator: '---------------' },
-		{name: 'Bulleted List', openWith: '- ' },
+		{name: 'Bulleted List', openWith: '- ' , className: 'bulletListButton' },
 		{name: 'Numeric List', openWith: function (markItUp) {
 			"use strict";
 			return markItUp.line + '. ';
-		}},
+		}, className: 'numericListButton' },
 		{separator: '---------------' },
-		{name: 'Picture', key: 'P', replaceWith: '![[![Alternative text]!]]([![Url:!:http://]!])'},
-		{name: 'Link', key: 'L', openWith: '[', closeWith: ']([![Url:!:http://]!])', placeHolder: 'Your text to link here...' },
+		{name: 'Picture', key: 'P', replaceWith: '![[![Alternative text]!]]([![Url:!:http://]!])', className: 'pictureButton' },
+		{name: 'Link', key: 'L', openWith: '[', closeWith: ']([![Url:!:http://]!])', placeHolder: 'Your text to link here...' , className: 'linkButton' },
 		{name: 'RedaxoLink',
 			beforeInsert: function () {
 				"use strict";
 				alert("Insert redaxo link");
-			}},
+			}, className: 'redaxoLinkButton' },
 		{separator: '---------------'},
 		// {name: 'Quotes', openWith: '> '}, # disable quotes for now, as they do not work
-		{name: 'Code Block / Code', openWith: '(!(\t|!|`)!)', closeWith: '(!(`)!)'},
-		{name: 'Table', openWith: '|thead1 | thead2 | thead3 | thead4 |\n|-----|------|------|------|\n|cell1 |cell2 |cell3 |cell4 |\n|cell1 |cell2 |cell3 |cell4 |' },
+		{name: 'Code Block / Code', openWith: '(!(\t|!|`)!)', closeWith: '(!(`)!)', className: 'codeBlockButton' },
+		{name: 'Table', openWith: '|thead1 | thead2 | thead3 | thead4 |\n|-----|------|------|------|\n|cell1 |cell2 |cell3 |cell4 |\n|cell1 |cell2 |cell3 |cell4 |' , className: 'tableButton' },
 		{separator: '---------------'}
 		// {name: 'Preview', call: 'preview', className:"preview"}
 	]
