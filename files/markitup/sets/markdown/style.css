@@ -44,6 +44,9 @@
 .redaxoLinkButton a {
 	background-image:url(images/redaxo_link.png);
 }
+.redaxoMediaButton a {
+	background-image:url(images/redaxo_link.png);
+}
 .quoteButton a	{
 	background-image:url(images/quotes.png);
 }

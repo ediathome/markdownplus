@@ -40,12 +40,19 @@ var myMarkdownSettings = {
 		{separator: '---------------' },
 		{name: 'Picture', key: 'P', replaceWith: '![[![Alternative text]!]]([![Url:!:http://]!])', className: 'pictureButton' },
 		{name: 'Link', key: 'L', openWith: '[', closeWith: ']([![Url:!:http://]!])', placeHolder: 'Your text to link here...' , className: 'linkButton' },
+		{separator: '---------------'},
 		{name: 'RedaxoLink',
 			beforeInsert: function () {
 				"use strict";
 				openLinkMap('TINY', '&clang=0');
 				return false;
 			}, className: 'redaxoLinkButton' },
+		{name: 'RedaxoMedia',
+			beforeInsert: function () {
+				"use strict";
+				openMediaPool('TINYIMG');
+				return false;
+			}, className: 'redaxoMediaButton' },
 		{separator: '---------------'},
 		// {name: 'Quotes', openWith: '> '}, # disable quotes for now, as they do not work
 		{name: 'Code Block / Code', openWith: '(!(\t|!|`)!)', closeWith: '(!(`)!)', className: 'codeBlockButton' },
@@ -56,12 +63,21 @@ var myMarkdownSettings = {
 };
 
 var insertLink = function (url, desc) {
+		"use strict";
     jQuery.markItUp({
         openWith: '[',
         closeWith: desc + '](' + url + ')',
         className: 'popup-linkintern'
     });
 };
+
+var insertImage = function (src, desc) {
+		"use strict";
+    jQuery.markItUp({
+			openWith: '![',
+			closeWith: desc + '](' + src + ')'
+    });
+}
 
 
 // mIu nameSpace to avoid conflict.

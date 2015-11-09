@@ -40,9 +40,11 @@ class MarkdownPlusEditor
 	}
 	private function textarea()
 	{
-		$rv  = '<textarea name="'.$this->config['input_name'].'"';
-		$rv .= 'class="'.$this->config['css_class'].' markdownplus"';
-		$rv .= 'cols="'.$this->config['cols'].'"'; 
+		$rv  = '<textarea ';
+		$rv .= 'name="'.$this->config['input_name'].'" ';
+		$rv .= 'id="'.$this->config['input_name'].'" ';
+		$rv .= 'class="'.$this->config['css_class'].' markdownplus" ';
+		$rv .= 'cols="'.$this->config['cols'].'" '; 
 		$rv .= 'rows="'.$this->config['rows'].'">';
 		$rv .= $this->config['content'];
 		$rv .= '</textarea>';
