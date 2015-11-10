@@ -56,7 +56,7 @@ var myMarkdownSettings = {
 		{separator: '---------------'},
 		// {name: 'Quotes', openWith: '> '}, # disable quotes for now, as they do not work
 		{name: 'Code Block / Code', openWith: '(!(\t|!|`)!)', closeWith: '(!(`)!)', className: 'codeBlockButton' },
-		{name: 'Table', openWith: '|thead1 | thead2 | thead3 | thead4 |\n|-----|------|------|------|\n|cell1 |cell2 |cell3 |cell4 |\n|cell1 |cell2 |cell3 |cell4 |' , className: 'tableButton' },
+		{name: 'Table', openWith: '|thead1 | thead2 | thead3 | thead4 |\n|-------|--------|--------|--------|\n|cell1  |cell2   |cell3   |cell4   |\n|cell1  |cell2   |cell3   |cell4   |' , className: 'tableButton' },
 		{separator: '---------------'}
 		// {name: 'Preview', call: 'preview', className:"preview"}
 	]
