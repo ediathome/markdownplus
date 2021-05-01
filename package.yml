@@ -1,0 +1,15 @@
+package: markdownplus
+version: '2.2.0'
+author: Martin Kolb
+supportpage: https://vtlearn.de
+
+page:
+    title: 'markdownplus'
+    perm: markdownplus[]
+    icon: rex-icon fa-database
+    linkAttr: { }
+    subpages:
+requires:
+    redaxo: '^5.1'
+    php:
+        version: '>=7.0'

@@ -1,16 +1,19 @@
 <?php
 /**
- * MarkdownPlus-Modul Ausgabe
+ * Markdown-Modul Ausgabe
  *
  * @author Martin Kolb
  */
 
 # Hole den Wert aus der Datenbank
-$sourceCode='REX_VALUE[1]';
+$sourceCode = 'REX_VALUE[1]';
 
 # Entferne html breaks, da sie die Konvertierung stören
-$sourceCode=preg_replace('/<br>|<br\/>|<br \/>/', '', $sourceCode);
+$sourceCode = preg_replace('/<br>|<br\/>|<br \/>/', '', $sourceCode);
+# $sourceCode = htmlspecialchars($sourceCode);
 
 # Ausgabe
-echo rex_markdown::getHtml($sourceCode);
+echo "<div class='col-lg-9'>";
+echo rex_markdown::factory()->parse($sourceCode);
+echo "</div><div class='clear'></div>";
 ?>

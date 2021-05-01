@@ -9,13 +9,14 @@ if ($subpage == '') {
 }
 
 // layout top
-require($REX['INCLUDE_PATH'] . '/layout/top.php');
+# require($REX['INCLUDE_PATH'] . '/layout/top.php');
 
 // title
-rex_title($REX['ADDON']['name']['markdownplus'] . ' <span style="font-size:14px; color:silver;">' . $REX['ADDON']['version']['markdownplu'] . '</span>', $REX['ADDON']['markdownplus']['SUBPAGES']);
+# rex_title($REX['ADDON']['name']['markdownplus'] . ' <span style="font-size:14px; color:silver;">' . $REX['ADDON']['version']['markdownplu'] . '</span>', $REX['ADDON']['markdownplus']['SUBPAGES']);
+echo('<h1>'.$this->getProperty('package') . '<span style="font-size:14px; color:silver;">' . $this->getProperty('version') . '</span></h1>');
 
 // include subpage
-include($REX['INCLUDE_PATH'] . '/addons/markdownplus/pages/' . $subpage . '.inc.php');
+include($subpage . '.inc.php');
 ?>
 
 <style type="text/css">
@@ -62,5 +63,5 @@ a.extern,
 
 <?php 
 // layout bottom
-require($REX['INCLUDE_PATH'] . '/layout/bottom.php');
+# require($REX['INCLUDE_PATH'] . '/layout/bottom.php');
 ?>

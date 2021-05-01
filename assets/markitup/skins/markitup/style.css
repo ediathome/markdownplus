@@ -59,6 +59,7 @@
 	list-style:none;
 	float:left;
 	position:relative;
+  margin: 4px;
 }
 .markItUpHeader ul li ul{
 	display:none;
